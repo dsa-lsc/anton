@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Primary email:</strong>
+  <%= @user.primary_email %>
+</p>
+
+<p>
+  <strong>Secondary emails:</strong>
+  <%= @user.secondary_emails %>
+</p>
+
+<p>
+  <strong>Discord:</strong>
+  <%= @user.discord_id %>
+</p>
+
+<p>
+  <strong>Pronouns:</strong>
+  <%= @user.pronouns %>
+</p>
+
+<p>
+  <strong>Over 18:</strong>
+  <%= @user.over_18 %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @user.active %>
+</p>
+
+<p>
+  <strong>Accepts coc:</strong>
+  <%= @user.accepts_coc %>
+</p>
+
+<p>
+  <strong>Users:</strong>
+  <%= @user.users_id %>
+</p>
+
+<p>
+  <strong>Roles:</strong>
+  <%= @user.roles %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

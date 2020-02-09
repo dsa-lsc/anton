@@ -1,0 +1,15 @@
+---
+# detectors:
+#   IrresponsibleModule:
+#     enabled: false
+
+directories:
+  "app/controllers":
+    IrresponsibleModule:
+      enabled: false
+  "app/helpers":
+    IrresponsibleModule:
+      enabled: false
+  "db/migrate":
+    IrresponsibleModule:
+      enabled: false

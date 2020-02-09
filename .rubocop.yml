@@ -1,0 +1,93 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.6
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - Guardfile
+    - config/initializers/_settings.rb
+
+Rails:
+  Enabled: true
+
+# Rails/DynamicFindBy:
+#   Enabled: false
+# Rails/FilePath:
+#   Enabled: false
+# Rails/ActiveRecordAliases:
+#   Enabled: true
+# Rails/SkipsModelValidations:
+#   Exclude:
+#     - spec/**/*
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - production
+    - staging
+    - test
+
+Layout/EmptyLines:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Metrics/BlockLength:
+  ExcludedMethods: ['included', 'mappings', 'settings', 'class_methods']
+  Exclude:
+    - spec/**/*
+    - lib/tasks/**/*
+    - config/routes.rb
+    - app/api/**/*
+Layout/LineLength:
+  Max: 100
+# Metrics/AbcSize:
+#   Max: 17.5
+# Metrics/MethodLength:
+#   Max: 10
+
+Style/FormatString:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+# Style/ClassAndModuleChildren:
+#   Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/LambdaCall:
+  EnforcedStyle: braces
+Style/MultilineIfModifier:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+Style/IfUnlessModifier:
+  Enabled: false
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+Style/ParallelAssignment:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  AutoCorrect: false
+
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
