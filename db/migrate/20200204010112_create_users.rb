@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.boolean :over_18
       t.timestamp :active
       t.timestamp :accepts_coc
-      t.belongs_to :users, null: false, foreign_key: true
+      t.belongs_to :users, type: :uuid, null: false, foreign_key: true
       t.jsonb :roles, default: []
 
       t.timestamps
