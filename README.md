@@ -5,20 +5,37 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
 
-* System dependencies
+```
+ruby -v # tests if ruby works
+```
 
-* Configuration
+- System dependencies
 
-* Database creation
+```
+gem install bundler
+bundle install
+```
 
-* Database initialization
+- Configuration
 
-* How to run the test suite
+- Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+Use the steps here:
 
-* Deployment instructions
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04
 
-* ...
+- Database initialization
+
+Make sure that you have a user that has the right permissions, set those in config/database.yml
+
+Then `rake db:create` and `rake db:migrate`.
+
+- How to run the test suite
+
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
+
+- ...
